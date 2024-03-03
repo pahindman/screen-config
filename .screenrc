@@ -15,6 +15,9 @@ bind w windowlist -b
 # Remove current region
 bind x remove
 
+# Follow neovim's advice for having colors show up correctly
+term screen-256color
+
 # Move between regions using Vim movement keys
 bind h focus left
 bind j focus down

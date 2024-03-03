@@ -4,7 +4,7 @@ altscreen on
 # Configure statusline at bottom of terminal
 hardstatus off
 hardstatus alwayslastline
-hardstatus string '%{= kG}%?[ %{G}%S %{g}]%:[ %{G}%H %{g}]%?[%= %{= kw}%?%-Lw%?%{r}(%{W}%n%f*%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{W} %D %M %d %{W}%c %{g}]'
+hardstatus string '%{= kG}%?[gs][ %{G}%H %{g}]%:[ %{G}%H %{g}]%?[%= %{= kw}%?%-Lw%?%{r}(%{W}%n%f*%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{W} %D %M %d %{W}%c:%s %{g}]'
 
 # Reload configuration
 bind r source ~/.screenrc

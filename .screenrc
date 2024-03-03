@@ -14,3 +14,9 @@ bind w windowlist -b
 
 # Remove current region
 bind x remove
+
+# Move between regions using Vim movement keys
+bind h focus left
+bind j focus down
+bind k focus up
+bind l focus right

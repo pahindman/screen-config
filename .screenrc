@@ -7,7 +7,7 @@ hardstatus alwayslastline
 hardstatus string '%{= kG}%?[gs][ %{G}%H %{g}]%:[ %{G}%H %{g}]%?[%= %{= kw}%?%-Lw%?%{r}(%{W}%n%f*%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{W} %D %M %d %{W}%c:%s %{g}]'
 
 # Reload configuration
-bind r source ~/.screenrc
+bind r eval "source ~/.screenrc" 'echo "~/.screenrc reloaded."'
 
 # Choose window
 bind w windowlist -b

@@ -29,3 +29,6 @@ bind l focus right
 # split windows nicely
 bind - split -h
 bind | split -v
+
+bind n layout next
+bind p layout prev

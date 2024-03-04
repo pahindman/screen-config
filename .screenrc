@@ -26,9 +26,9 @@ bind j focus down
 bind k focus up
 bind l focus right
 
-# split windows nicely
-bind - split -h
-bind | split -v
+# split windows using 'visual' keys, switch to new region, and create a new window in it
+bind - eval "split -h" "focus next" "screen"
+bind | eval "split -v" "focus next" "screen"
 
 bind n layout next
 bind p layout prev

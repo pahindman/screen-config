@@ -1,10 +1,12 @@
 startup_message off
 altscreen on
 
+backtick 1 3600 0 uptime_in_days
+
 # Configure statusline at bottom of terminal
 hardstatus off
 hardstatus alwayslastline
-hardstatus string '%{= kG}%?[gs][ %{G}%H %{g}]%:[ %{G}%H %{g}]%?[%= %{= kw}%?%-Lw%?%{r}(%{W}%n%f*%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{W} %D %M %d %{W}%c:%s %{g}]'
+hardstatus string '%{= kG}%?[gs][ %{G}%H %{g}]%:[ %{G}%H %{g}]%?[%= %{= kw}%?%-Lw%?%{r}(%{W}%n%f*%t%?(%u)%?%{r})%{w}%?%+Lw%?%= %{g}][%{R}%? Up %1`%?%{W} %D %M %d %{W}%c:%s %{g}]'
 
 # Reload configuration
 bind r eval "source ~/.screenrc" 'echo "~/.screenrc reloaded."'

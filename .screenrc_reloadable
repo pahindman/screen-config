@@ -37,7 +37,73 @@ bind x remove
 bind K eval "kill" "remove"
 
 # Unbind these keys
-bind ^[
+bind 0
+bind 1
+bind 2
+bind 3
+bind 4
+bind 5
+bind 6
+bind 7
+bind 8
+bind 9
+bind ^a
+bind b
+bind f
+bind ^f
+bind i
+bind ^i
+bind m
+bind t
+bind v
+bind A
+bind ^B
+bind B
+bind ^C
+bind C
+bind ^D
+bind D
+bind F
+bind ^G
+bind ^H # Backspace
+bind H
+bind I
+bind ^L
+bind L
+bind ^M
+bind ^N
+bind N
+bind O
+bind ^P
+bind ^Q
+bind Q
+bind ^R
+bind ^S
+bind S
+bind ^T
+bind ^V
+bind ^W
+bind W
+bind ^X
+bind X
+bind ^Z
+bind Z
+bind ^[ # Esc
+bind ^]
+bind \
+bind ^@
+bind ^?
+bind ,
+bind .
+bind '"'
+bind "'"
+bind " "
+bind *
+bind =
+bind <
+bind >
+bind {
+bind }
 
 # In copy mode, use 'v' to start marking a region, and 'y' to yank it
 markkeys " =v"

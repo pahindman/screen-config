@@ -33,6 +33,9 @@ bind | eval "split -v" "focus next" "screen"
 bind n layout next
 bind p layout prev
 
+# Unbind these keys
+bind ^[
+
 # In copy mode, use 'v' to start marking a region, and 'y' to yank it
 markkeys " =v"
 markkeys "^M=y"

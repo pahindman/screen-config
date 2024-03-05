@@ -30,6 +30,8 @@ bind l focus right
 bind - eval "split -h" "focus next" "screen"
 bind | eval "split -v" "focus next" "screen"
 
+# Bind keys for creating and navigating layouts
+bind c eval "layout new" "screen"
 bind n layout next
 bind p layout prev
 

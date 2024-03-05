@@ -33,6 +33,9 @@ bind l focus right
 # current layout then it won't do anything.  In that case, use 'layout remove'
 bind x remove
 
+# Kill current window and remove the region that contained it
+bind K eval "kill" "remove"
+
 # Unbind these keys
 bind ^[
 

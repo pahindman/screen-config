@@ -10,11 +10,18 @@ altscreen on
 # Choose window
 bind w windowlist -b
 
-# Remove current region
-bind x remove
-
 # Follow neovim's advice for having colors show up correctly
 term screen-256color
+
+# Bind keys for creating and navigating layouts
+bind c eval "layout new" "screen"
+bind n layout next
+bind p layout prev
+
+# Bind 'visual' keys that create a new region, switch to it,
+# and create a new window in it
+bind - eval "split -h" "focus next" "screen"
+bind | eval "split -v" "focus next" "screen"
 
 # Move between regions using Vim movement keys
 bind h focus left
@@ -22,14 +29,9 @@ bind j focus down
 bind k focus up
 bind l focus right
 
-# split windows using 'visual' keys, switch to new region, and create a new window in it
-bind - eval "split -h" "focus next" "screen"
-bind | eval "split -v" "focus next" "screen"
-
-# Bind keys for creating and navigating layouts
-bind c eval "layout new" "screen"
-bind n layout next
-bind p layout prev
+# Bind key to remove current region.  If this is the last region in the
+# current layout then it won't do anything.  In that case, use 'layout remove'
+bind x remove
 
 # Unbind these keys
 bind ^[

@@ -7,13 +7,6 @@ bind r eval "source ~/.screenrc_reloadable" 'echo "~/.screenrc_reloadable reload
 startup_message off
 altscreen on
 
-backtick 1 3600 0 uptime_in_days
-
-# Configure statusline at bottom of terminal
-hardstatus off
-hardstatus alwayslastline
-hardstatus string '%{= kG}[gs]%?[%{G}%H%{g}]%:[%{G}%H%{g}]%?[%= %{= kw}%?%-Lw%?%{r}(%{W}%n%{y}%f*%{-}%t%{-})%{-}%?%+Lw%?%= %{g}][%{R}%?Up %1`%?%{W} %D %M %d %{W}%c:%s%{g}]'
-
 # Choose window
 bind w windowlist -b
 
@@ -48,5 +41,12 @@ markkeys "^M=y"
 # Set caption for individual regions
 # "caption top ..." works in master, but not in 4.9.0
 caption splitonly "%?%F%{= g.}%:%{=d w.}%? %{W}%n%f %t%{-} %?%E[C-a]%?"
+
+# Configure statusline at bottom of terminal
+hardstatus off
+hardstatus alwayslastline
+hardstatus string '%{= kG}[gs]%?[%{G}%H%{g}]%:[%{G}%H%{g}]%?[%= %{= kw}%?%-Lw%?%{r}(%{W}%n%{y}%f*%{-}%t%{-})%{-}%?%+Lw%?%= %{g}][%{R}%?Up %1`%?%{W} %D %M %d %{W}%c:%s%{g}]'
+
+backtick 1 3600 0 uptime_in_days
 
 # vi: filetype=screen

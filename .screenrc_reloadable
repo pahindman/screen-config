@@ -1,0 +1,52 @@
+# This file contains screen config that will be reloaded anytime the 'reload
+# configuration' key binding is used.
+
+# Reload configuration
+bind r eval "source ~/.screenrc_reloadable" 'echo "~/.screenrc_reloadable reloaded."'
+
+startup_message off
+altscreen on
+
+backtick 1 3600 0 uptime_in_days
+
+# Configure statusline at bottom of terminal
+hardstatus off
+hardstatus alwayslastline
+hardstatus string '%{= kG}[gs]%?[%{G}%H%{g}]%:[%{G}%H%{g}]%?[%= %{= kw}%?%-Lw%?%{r}(%{W}%n%{y}%f*%{-}%t%{-})%{-}%?%+Lw%?%= %{g}][%{R}%?Up %1`%?%{W} %D %M %d %{W}%c:%s%{g}]'
+
+# Choose window
+bind w windowlist -b
+
+# Remove current region
+bind x remove
+
+# Follow neovim's advice for having colors show up correctly
+term screen-256color
+
+# Move between regions using Vim movement keys
+bind h focus left
+bind j focus down
+bind k focus up
+bind l focus right
+
+# split windows using 'visual' keys, switch to new region, and create a new window in it
+bind - eval "split -h" "focus next" "screen"
+bind | eval "split -v" "focus next" "screen"
+
+# Bind keys for creating and navigating layouts
+bind c eval "layout new" "screen"
+bind n layout next
+bind p layout prev
+
+# Unbind these keys
+bind ^[
+
+# In copy mode, use 'v' to start marking a region, and 'y' to yank it
+markkeys " =v"
+markkeys "^M=y"
+
+# Set caption for individual regions
+# "caption top ..." works in master, but not in 4.9.0
+caption splitonly "%?%F%{= g.}%:%{=d w.}%? %{W}%n%f %t%{-} %?%E[C-a]%?"
+
+# vi: filetype=screen

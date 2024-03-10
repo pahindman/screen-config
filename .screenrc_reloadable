@@ -104,6 +104,7 @@ bind <
 bind >
 bind {
 bind }
+bind -k kB # termcap 'Back tab stop' capability, i.e. Shift-Tab
 
 # In copy mode, use 'v' to start marking a region, and 'y' to yank it
 markkeys " =v"

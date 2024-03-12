@@ -85,7 +85,9 @@ bind ^W
 bind W
 bind ^X
 bind X
-bind ^Z
+# This seems like a bug, but screen treats C-z and C-Z as the same thing, so
+# we can't unbind C-Z without also unbinding C-z
+#bind ^Z
 bind Z
 bind ^[ # Esc
 bind ^]

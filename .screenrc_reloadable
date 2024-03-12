@@ -52,6 +52,7 @@ bind ^i # Tab
 bind m
 bind t
 bind v
+bind z echo 'Zoom not supported'
 bind A
 bind ^B
 bind B

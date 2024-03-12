@@ -17,7 +17,6 @@ bind : colon
 bind ? help
 bind a meta
 bind d detach
-bind D eval displays "echo 'Running (displays)'"
 bind ^r eval "source ~/.screenrc_reloadable" 'echo "~/.screenrc_reloadable reloaded."'
 bind w windowlist -b
 bind z echo 'Zoom not supported'

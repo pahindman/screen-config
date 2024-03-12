@@ -29,12 +29,8 @@ bind j focus down
 bind k focus up
 bind l focus right
 
-# Bind key to remove current region.  If this is the last region in the
-# current layout then it won't do anything.  In that case, use 'layout remove'
-bind x remove
-
 # Kill current window and remove the region that contained it
-bind K eval "kill" "remove"
+bind x eval "kill" "remove"
 
 # Unbind these keys
 bind 0

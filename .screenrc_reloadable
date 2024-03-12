@@ -1,22 +1,35 @@
 # This file contains screen config that will be reloaded anytime the 'reload
 # configuration' key binding is used.
 
-# Reload configuration
-bind r eval "source ~/.screenrc_reloadable" 'echo "~/.screenrc_reloadable reloaded."'
-
 startup_message off
 altscreen on
 
-# Choose window
-bind w windowlist -b
-
 # Follow neovim's advice for having colors show up correctly
 term screen-256color
+
+# Unbind all the default keybindings, we'll bind the ones we want below
+unbindall
+
+# The colon command is the escape hatch to do whatever we want that doesn't
+# have a key binding.  Useful if we forget to bind something.
+bind : colon
+
+bind ? help
+bind a meta
+bind d detach
+bind D eval displays "echo 'Running (displays)'"
+bind ^r eval "source ~/.screenrc_reloadable" 'echo "~/.screenrc_reloadable reloaded."'
+bind w windowlist -b
+bind z echo 'Zoom not supported'
+bind ^z suspend
 
 # Bind keys for creating and navigating layouts
 bind c eval "layout new" "screen"
 bind n layout next
 bind p layout prev
+
+# Kill current window and remove the region that contained it
+bind x eval "kill" "remove"
 
 # Bind 'visual' keys that create a new region, switch to it,
 # and create a new window in it
@@ -29,85 +42,9 @@ bind j focus down
 bind k focus up
 bind l focus right
 
-# Kill current window and remove the region that contained it
-bind x eval "kill" "remove"
-
-# Unbind these keys
-bind 0
-bind 1
-bind 2
-bind 3
-bind 4
-bind 5
-bind 6
-bind 7
-bind 8
-bind 9
-bind ^a
-bind b
-bind f
-bind ^f
-# This seems like a bug, but screen treats C-i and C-I as the same thing
-bind ^i # Tab
-bind m
-bind t
-bind v
-bind z echo 'Zoom not supported'
-bind A
-bind ^B
-bind B
-bind ^C
-bind C
-bind ^D
-bind D
-bind F
-bind ^G
-bind ^H # Backspace
-bind H
-# This seems like a bug, but screen treats C-i and C-I as the same thing
-bind ^I # Tab
-bind I
-bind ^L
-bind L
-bind ^M # Enter
-bind M
-bind ^N
-bind N
-bind O
-bind ^P
-bind ^Q
-bind Q
-bind ^R
-bind ^S
-bind S
-bind ^T
-bind ^V
-bind ^W
-bind W
-bind ^X
-bind X
-# This seems like a bug, but screen treats C-z and C-Z as the same thing, so
-# we can't unbind C-Z without also unbinding C-z
-#bind ^Z
-bind Z
-bind ^[ # Esc
-bind ^]
-bind \
-bind ^@
-bind ^?
-bind ,
-bind .
-bind '"'
-bind "'"
-bind " "
-bind *
-bind =
-bind <
-bind >
-bind {
-bind }
-bind _
-bind -k kB # termcap 'Back tab stop' capability, i.e. Shift-Tab
+# Vim-like key bindings for entering copy mode and pasting
+bind i copy
+bind ^v paste
 
 # In copy mode, use 'v' to start marking a region, and 'y' to yank it
 markkeys " =v"

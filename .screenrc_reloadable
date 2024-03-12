@@ -68,7 +68,8 @@ bind ^I # Tab
 bind I
 bind ^L
 bind L
-bind ^M
+bind ^M # Enter
+bind M
 bind ^N
 bind N
 bind O

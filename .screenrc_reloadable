@@ -47,8 +47,8 @@ bind ^a
 bind b
 bind f
 bind ^f
-bind i
-bind ^i
+# This seems like a bug, but screen treats C-i and C-I as the same thing
+bind ^i # Tab
 bind m
 bind t
 bind v
@@ -63,6 +63,8 @@ bind F
 bind ^G
 bind ^H # Backspace
 bind H
+# This seems like a bug, but screen treats C-i and C-I as the same thing
+bind ^I # Tab
 bind I
 bind ^L
 bind L

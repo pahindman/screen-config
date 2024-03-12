@@ -112,7 +112,7 @@ markkeys "^M=y"
 
 # Set caption for individual regions
 # "caption top ..." works in master, but not in 4.9.0
-caption splitonly "%?%F%{= g.}%:%{=d w.}%? %{W}%n%f %t%{-} %?%P[copy]%? %?%E[C-a]%?"
+caption always "%?%F%{= g.}%:%{=d w.}%? %{W}%n%f %t%{-} %?%P[copy]%? %?%E[C-a]%?"
 
 # Configure statusline at bottom of terminal
 hardstatus off
